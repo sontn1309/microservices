@@ -12,11 +12,8 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
 (async () => {
   await sequelize.addModels(V0_FEED_MODELS);
 
-  console.debug("Initialize database connection...");
-  await sequelize.sync();
-
   const app = express();
-  const port = 8081;
+  const port = process.env.PORT || 8080;
 
   app.use(bodyParser.json());
 
