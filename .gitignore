@@ -102,3 +102,7 @@ dist
 
 # TernJS port file
 .tern-port
+set_env.sh
+udagram-frontend/package-lock.json
+udagram-frontend/package-lock.json
+udagram-api/package-lock.json
