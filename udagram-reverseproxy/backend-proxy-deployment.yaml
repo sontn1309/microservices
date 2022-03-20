@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-proxy
+  labels:
+    app: api-proxy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: api-proxy
+  template:
+    metadata:
+      labels:
+        app: api-proxy
+    spec:
+      containers:
+      - name: api-proxy
+        image: sontn1309/udagram-reverseproxy
+        ports:
+        - containerPort: 80
