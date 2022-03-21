@@ -23,7 +23,7 @@ script:
 # Tagging
   - docker tag udagram-api-feed sontn1309/udagram-api-feed:v1
   - docker tag udagram-reverseproxy sontn1309/udagram-reverseproxy:v1
-  - docker tag udagram-frontend sontn1309/udagram-frontend:v1
+  - docker tag udagram-frontend sontn1309/udagram-frontend:v3
   - docker tag udagram-api-user sontn1309/udagram-api-user:v1
 after_success:
 # Do similar for other three images

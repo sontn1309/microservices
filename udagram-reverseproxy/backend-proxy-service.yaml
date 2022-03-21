@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: api-proxy
   labels:
-    run: api-proxy
+    run: reverseproxy
+  name: reverseproxy
 spec:
   ports:
-  - port: 80
-    protocol: TCP
+  - name: "8080"
+    port: 8080
+    targetPort: 8080
   selector:
-    run: api-proxy
+    service: reverseproxy
