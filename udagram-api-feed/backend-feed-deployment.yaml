@@ -5,7 +5,7 @@ metadata:
     service: backend-feed
   name: backend-feed
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       service: backend-feed
@@ -22,10 +22,10 @@ spec:
           - containerPort: 8080
           resources:
             requests:
-              memory: "64Mi"
+              memory: 64Mi
               cpu: "250m"
             limits:
-              memory: "1024Mi"
+              memory: 1024Mi
               cpu: "500m"
           env:
             - name: URL
